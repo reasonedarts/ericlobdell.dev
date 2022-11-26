@@ -75,6 +75,7 @@ module.exports = withBundleAnalyzer({
   images: {
     unoptimized: true,
   },
+  swcMinify: false,
   async headers() {
     return [
       {

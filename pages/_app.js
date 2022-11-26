@@ -6,6 +6,7 @@ import '@fontsource/inter/variable-full.css'
 
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
+import Script from 'next/script'
 
 import siteMetadata from '@/data/siteMetadata'
 import Analytics from '@/components/analytics'
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }) {
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>
+      <Script src="static/p5.min.js" strategy="beforeInteractive"></Script>
     </ThemeProvider>
   )
 }
